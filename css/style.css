@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(../img/background.jpg);
+    background-image: cover;/*cobrir toda a largura do site*/
+    background-repeat: no-repeat;/*Não repetir imagem caso for pequena*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {/*inserir algo antes do conteudo*/
+    content: '';/*conteuo, nesse caso é vazio pois aplicamos a cor*/
+    background-color: rgb(0, 0, 0, .5); /*transparencia*/
+    width: 100%;
+    height: 100%;
+    position: absolute;/*sobrepoe o bloco anterior*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo img {
+    height: 45px;
+    width: 167px;
+}
+
+.header {
+    padding: 20px 50px;
+    position: relative;
+}
+
+.login_body {
+    padding: 60px;
+    position: relative;
+    max-width: 450px;/*maximo de largura*/
+    height: 450px;
+    margin-left: 50%;/*margem para esquerda*/
+    background-color: rgb(0, 0, 0, 0.75);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);/*posição do retangulo em relação ao
+    x e y*/
+}
+/*box-sizing: border-box que indica que o tamanho agora
+ levará em conta até a borda -- ou seja, o width será a 
+ soma do conteúdo com a borda e o padding.*/
+
+.login_body h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-top: 0;
+}
+
+.login_body input {
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    background-color: #333;
+    border: none;/*não vai ter borda*/
+    border-radius: 5px;
+    padding-left: 15px;/*esquerda*/
+    box-sizing: border-box;
+}
+
+/*quando passar o mouser*/
+.login_body input:hover {
+    background-color: #444;
+}
+
+.input_box {
+    margin-bottom: 25px;
+}
+
+.login_body button {
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    background-color: #e50914;
+    border-radius: 3px;
+    font-weight: bold;/*negrito*/
+    font-size: 16px;
+    border: none;/*sem borda*/
+    margin-bottom: 10px;
+}
+
+.login_body button:hover {
+    background-color: #fc1722;
+    cursor: pointer;/*maozinha*/
+}
+
